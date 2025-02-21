@@ -245,25 +245,38 @@ document.addEventListener('DOMContentLoaded', function() {
   const infoIcon = document.getElementById('infoIcon');
   const infoIconLeft = document.getElementById('infoIconLeft');
   const instructionsModal = document.getElementById('instructionsModal');
+  const contactModal = document.getElementById('contactModal');
   const closeInstructions = document.getElementById('closeInstructions');
+  const closeContact = document.getElementById('closeContact');
 
-  // Both icons open instructions
-  infoIcon.addEventListener('click', () => {
+  // Left icon opens instructions
+  infoIconLeft.addEventListener('click', () => {
     instructionsModal.classList.add('active');
   });
 
-  infoIconLeft.addEventListener('click', () => {
-    instructionsModal.classList.add('active');
+  // Right icon opens contact info
+  infoIcon.addEventListener('click', () => {
+    contactModal.classList.add('active');
   });
 
   closeInstructions.addEventListener('click', () => {
     instructionsModal.classList.remove('active');
   });
 
-  // Close modal when clicking outside
+  closeContact.addEventListener('click', () => {
+    contactModal.classList.remove('active');
+  });
+
+  // Close modals when clicking outside
   instructionsModal.addEventListener('click', (e) => {
     if (e.target === instructionsModal) {
       instructionsModal.classList.remove('active');
+    }
+  });
+
+  contactModal.addEventListener('click', (e) => {
+    if (e.target === contactModal) {
+      contactModal.classList.remove('active');
     }
   });
 }); 
