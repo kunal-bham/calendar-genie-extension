@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Update hotkey info display
     hotkeyInfo.innerHTML = `
       ${formatShortcut(captureCommand?.shortcut)} - Capture Screenshot<br>
-      ${formatShortcut(processCommand?.shortcut)} - Past Screenshot
+      ${formatShortcut(processCommand?.shortcut)} - Paste Screenshot
     `;
 
     // Update the instruction step text
