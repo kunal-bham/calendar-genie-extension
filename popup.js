@@ -243,10 +243,16 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Add instructions modal handlers
   const infoIcon = document.getElementById('infoIcon');
+  const infoIconLeft = document.getElementById('infoIconLeft');
   const instructionsModal = document.getElementById('instructionsModal');
   const closeInstructions = document.getElementById('closeInstructions');
 
+  // Both icons open instructions
   infoIcon.addEventListener('click', () => {
+    instructionsModal.classList.add('active');
+  });
+
+  infoIconLeft.addEventListener('click', () => {
     instructionsModal.classList.add('active');
   });
 

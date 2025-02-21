@@ -243,7 +243,6 @@
     .info-icon-container {
       position: absolute;
       top: 16px;
-      right: 16px;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -255,10 +254,12 @@
       z-index: 10;
     }
 
-    .info-icon-container:hover {
-      background: rgba(255, 255, 255, 0.2);
-      transform: translateY(-1px);
-      box-shadow: 0 2px 8px rgba(123, 136, 255, 0.3);
+    .info-icon-container.left {
+      left: 16px;
+    }
+
+    .info-icon-container.right {
+      right: 16px;
     }
 
     .info-icon {
@@ -382,6 +383,12 @@
       background: rgba(255, 255, 255, 0.2);
       transform: scale(1.1);
     }
+
+    .info-icon-container:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: translateY(-1px);
+      box-shadow: 0 2px 8px rgba(123, 136, 255, 0.3);
+    }
   </style>
 </head>
 <body>
@@ -389,7 +396,13 @@
     <div class="header">
       <h1 class="title">Calendar Genie</h1>
     </div>
-    <div class="info-icon-container" id="infoIcon" title="Instructions">
+    <div class="info-icon-container left" id="infoIconLeft" title="Instructions">
+      <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+        <path d="M12 8v4M12 16h.01"/>
+      </svg>
+    </div>
+    <div class="info-icon-container right" id="infoIcon" title="Instructions">
       <svg class="info-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
         <path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
         <path d="M12 8v4M12 16h.01"/>
